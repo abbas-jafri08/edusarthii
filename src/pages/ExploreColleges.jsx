@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { askAI } from "../lib/groq";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import CollegeCard from "../components/CollegeCard.jsx";
 
 export default function ExploreColleges() {
   const [city, setCity] = useState("");
@@ -44,12 +46,38 @@ Use bullet points.`
         </div>
 
         {colleges && (
-          <div style={{ marginTop: 20 }}>
-            <h3>Colleges in {city}</h3>
-            {colleges.split("\n").map((c, i) => (
-              <p key={i}>{c}</p>
-            ))}
-          </div>
+          <div className="container mt-5" style={{ maxWidth: "1000px" }}>
+
+  {(() => {
+    const parts = colleges.split("\n\n");
+
+    const heading = parts[0]; // first line
+    const last = parts[parts.length - 1]; // last line
+    const collegeList = parts.slice(1, parts.length - 1); // actual colleges
+
+    return (
+      <>
+        {/* First Heading */}
+        <h4 className="fw-bold text mb-4 text-center">
+          {heading}
+        </h4>
+
+        {/* College Cards */}
+        <div className="row justify-content-center">
+          {collegeList.map((college, i) => (
+            <CollegeCard key={i} college={college} />
+          ))}
+        </div>
+
+        {/* Last Line */}
+        <p className="text-center mt-3 text-muted">
+          {last}
+        </p>
+      </>
+    );
+  })()}
+
+</div>
         )}
       </div>
     </div>

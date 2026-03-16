@@ -459,3 +459,212 @@ height:100%;
 background:#4f46e5;
 border-radius:10px;
 }
+
+/* tabish and aftab css */
+
+
+.card{
+  border-radius:12px;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  transition:0.25s;
+}
+
+/* =========================================
+   HOME LANDING PAGE STYLES
+========================================= */
+
+/* full screen sections */
+
+.section-full{
+  min-height:calc(100vh - 72px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:80px 0;
+}
+
+/* hero wrapper */
+
+.home-hero-wrapper{
+  background:linear-gradient(180deg,var(--bg),#f1f5f9);
+}
+
+/* hero description */
+
+.hero-description{
+  color:var(--subtext);
+  margin-top:10px;
+  max-width:520px;
+}
+
+/* secondary button */
+
+.btn-secondary{
+  padding:12px 18px;
+  border-radius:10px;
+  border:1px solid rgba(15,23,42,0.08);
+  background:var(--card);
+  color:var(--text);
+  font-weight:600;
+  text-decoration:none;
+}
+
+/* badge */
+
+.badge{
+  background:rgba(47,141,214,0.08);
+  color:var(--title);
+  padding:6px 12px;
+  border-radius:999px;
+  font-size:0.8rem;
+  font-weight:700;
+}
+
+/* horizontal scroll */
+
+.scroll-wrapper{
+  overflow-x:auto;
+  margin-top:18px;
+}
+
+.scroll-wrapper::-webkit-scrollbar{
+  display:none;
+}
+
+.scroll-content{
+  display:flex;
+  gap:14px;
+}
+
+/* quick card icons */
+
+.icon-box{
+  width:42px;
+  height:42px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:10px;
+  font-size:18px;
+}
+
+.blue{background:#dbeafe;color:#1e40af;}
+.green{background:#dcfce7;color:#166534;}
+.purple{background:#f3e8ff;color:#6b21a8;}
+
+/* features */
+
+.features-grid{
+  display:flex;
+  gap:20px;
+}
+
+.feature-card{
+  width:300px;
+}
+
+.feature-icon{
+  font-size:2rem;
+  margin-bottom:10px;
+}
+
+/* section titles */
+
+.section-title{
+  text-align:center;
+  font-size:2rem;
+  font-weight:700;
+  margin-bottom:8px;
+}
+
+.section-subtitle{
+  text-align:center;
+  color:var(--subtext);
+  margin-bottom:40px;
+}
+
+/* testimonials */
+
+.testimonials-grid{
+  display:flex;
+  gap:20px;
+}
+
+.testimonial-card{
+  width:320px;
+}
+
+.quote{
+  font-style:italic;
+  color:var(--text);
+  margin-bottom:16px;
+}
+
+.quote-icon{
+  font-size:2rem;
+  opacity:0.3;
+}
+
+.avatar{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  background:#dbeafe;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+}
+
+/* hero image */
+
+.image-stack{
+  position:relative;
+}
+
+.main-hero-img{
+  width:100%;
+  border-radius:16px;
+  box-shadow:var(--shadow);
+}
+
+/* final cta */
+
+.final-cta-section{
+  background:rgba(47,141,214,0.06);
+}
+
+.final-cta-content{
+  text-align:center;
+  max-width:700px;
+}
+
+/* scroll indicator */
+
+.scroll-indicator{
+  position:absolute;
+  bottom:20px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:0.85rem;
+  color:var(--muted);
+}
+
+.scroll-indicator .arrow{
+  width:10px;
+  height:10px;
+  border-right:2px solid var(--muted);
+  border-bottom:2px solid var(--muted);
+  transform:rotate(45deg);
+  margin:6px auto;
+  animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+  0%,20%,50%,80%,100%{transform:translateY(0) rotate(45deg);}
+  40%{transform:translateY(-6px) rotate(45deg);}
+  60%{transform:translateY(-3px) rotate(45deg);}
+}
